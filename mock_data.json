@@ -1,0 +1,133 @@
+{
+  "project": {
+    "name": "Project name",
+    "orgName": "Organization name",
+    "startDate": "2020-02-05T05:00:00.000Z",
+    "endDate": "2020-02-20T05:00:00.000Z",
+    "administrator": {
+      "firstName": "Kelly",
+      "lastName": "Lewis",
+      "companyName": "Andiron",
+      "emailAddress": "klewis@tllgroup.com"
+    },
+    "assessmentName": "Leadership Paradox Assessment - Self",
+    "is360": false
+  },
+  "participant": {
+    "firstName": "Jay",
+    "lastName": "Hogan",
+    "emailAddress": "jhogan@singlestoneconsulting.com",
+    "jobTitle": "Tech Director"
+  },
+  "summary": [
+    {
+      "name": "Impact",
+      "seq": 1,
+      "slices": [
+        {
+          "name": "Self-Reliance",
+          "seq": 1,
+          "poles": [
+            {
+              "name": "Responsibility",
+              "pair": "Action",
+              "seq": 1,
+              "data": [
+                {
+                  "type": "self",
+                  "benefits": 3.1,
+                  "overuses": 2.5
+                },
+                {
+                  "type": "manager",
+                  "benefits": 3.1,
+                  "overuses": 2.5
+                },
+                {
+                  "type": "peer",
+                  "benefits": 3.1,
+                  "overuses": 2.5
+                },
+                {
+                  "type": "direct report",
+                  "benefits": 3.1,
+                  "overuses": 2.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "detail": [
+    {
+      "name": "Belonging",
+      "seq": 1,
+      "slices": [
+        {
+          "name": "Connection",
+          "seq": 1,
+          "poles": [
+            {
+              "name": "Focus Others",
+              "pair": "Action",
+              "seq": 1,
+              "questions": [
+                {
+                  "text": "I am willing to admit my shortcomings to others",
+                  "seq": 1,
+                  "isBenefits": true,
+                  "self": 6,
+                  "manager": 3
+                },
+                {
+                  "text": "I am okay not knowing or not having the answer",
+                  "seq": 2,
+                  "isBenefits": true,
+                  "self": 5,
+                  "manager": 3
+                },
+                {
+                  "text": "I allow others to see all of who I am",
+                  "seq": 3,
+                  "isBenefits": true,
+                  "self": 6,
+                  "manager": 4
+                }
+              ]
+            },
+            {
+              "name": "Being open",
+              "pair": "Action",
+              "seq": 2,
+              "questions": [
+                {
+                  "text": "I encourage the voice of others and listen to understand their perspective",
+                  "seq": 1,
+                  "isBenefits": true,
+                  "self": 6,
+                  "manager": 3
+                },
+                {
+                  "text": "I inquire and care about other people's needs",
+                  "seq": 2,
+                  "isBenefits": true,
+                  "self": 4,
+                  "manager": 3
+                },
+                {
+                  "text": "I give serious considerations to other's interests when making decisions",
+                  "seq": 3,
+                  "isBenefits": true,
+                  "self": 4,
+                  "manager": 3
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
