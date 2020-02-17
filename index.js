@@ -13,10 +13,6 @@ const port = process.env.PORT || 9000;
 
 server.use("/api", pdfRoute);
 
-server.get("/", (req, res) => {
-  res.send("it works");
-});
-
 if (process.env.NODE_ENV === "production") {
   server.use(express.static("client/build"));
   server.get("/*", (req, res) => {
