@@ -1,47 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 
 function App() {
+  const [data, setData] = useState(undefined);
+  useEffect(() => {
+    axios("/api/pdf", { method: "POST", responseType: "blob" })
+      .then(res => setData(res.data))
+      .catch(err => console.log(err));
+  }, []);
+
   const downloadPDF = e => {
     e.preventDefault();
-    axios("/api/pdf", {
-      method: "POST",
-      responseType: "blob"
-    })
-      .then(response => {
-        const file = new Blob([response.data], {
-          type: "application/pdf"
-        });
-        const fileURL = URL.createObjectURL(file);
-
-        const downloadLink = document.createElement("a");
-        const fileName = "myPDF.pdf";
-        downloadLink.href = fileURL;
-        downloadLink.setAttribute("download", fileName);
-        downloadLink.click();
-
-        // open in a native browser pdf viewer
-        // window.open(fileURL);
-      })
-      .catch(err => console.log(err));
+    const file = new Blob([data], {
+      type: "application/pdf"
+    });
+    const fileURL = URL.createObjectURL(file);
+    const downloadLink = document.createElement("a");
+    const fileName = "myPDF.pdf";
+    downloadLink.href = fileURL;
+    downloadLink.setAttribute("download", fileName);
+    downloadLink.click();
   };
 
   const viewPDF = e => {
     e.preventDefault();
-    axios("/api/pdf", {
-      method: "POST",
-      responseType: "blob"
-    })
-      .then(response => {
-        const file = new Blob([response.data], {
-          type: "application/pdf"
-        });
-        const fileURL = URL.createObjectURL(file);
-        window.open(fileURL);
-      })
-      .catch(err => console.log(err));
+    const file = new Blob([data], {
+      type: "application/pdf"
+    });
+    const fileURL = URL.createObjectURL(file);
+    window.open(fileURL);
   };
+
   return (
     <div className="App">
       <header className="App-header">
