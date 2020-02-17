@@ -5,7 +5,7 @@ import "./App.css";
 function App() {
   const downloadPDF = e => {
     e.preventDefault();
-    axios("http://localhost:9000/api/pdf", {
+    axios("api/pdf", {
       method: "POST",
       responseType: "blob"
     })
