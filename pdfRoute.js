@@ -21,7 +21,7 @@ hbs.registerHelper("dataFormat", (value, format) => {
 });
 
 const main = async (fileName, data) => {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
   const page = await browser.newPage();
   const content = await compile(fileName, data);
   await page.setContent(content);
